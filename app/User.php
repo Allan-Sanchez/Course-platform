@@ -2,6 +2,10 @@
 
 namespace App;
 
+use App\Role;
+use App\Student;
+use App\Teacher;
+use App\UserSocialAccount;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -36,4 +40,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // 1 -> 1
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    // 1 -> 1 
+    public function student()
+    {
+        return $this->hasOne(Student::class);
+    }
+
+    // 1 -> 1
+    public function teacher()
+    {
+        return $this->hasOne(Teacher::class);
+    }
+
+    // 1 -> 1
+    public function socialAccount()
+    {
+        return $this->hasOne(UserSocialAccount::class);
+    }
+
 }
