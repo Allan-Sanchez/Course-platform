@@ -1,0 +1,18 @@
+{
+    "socialite":"Ingresa con Socialite",
+    "select a language":"Selecciona un Lenguaje",
+    "spanish":"Español",
+    "english": "Ingles",
+    "Login": "Ingresar",
+    "Logout": "Cerrar Sesion",
+    "Register" : "Registrarme",
+    "Manage Courses": "Administrar Cursos",
+    "Manage Students": "Administrar Estudiantes",
+    "Manage Teachers": "Administrar Profesores",
+    "My Profile": "Mi Perfil",
+    "LogouMy Subscriptionst": "Mis Suscripciones",
+    "My Bills": "Mis Facturas",
+    "My Courses": "Mis Cursos",
+    "Courses Developed by Me": "Cursos Desarrollados por Mi",
+    "Create Course": "Crear Curso"
+}

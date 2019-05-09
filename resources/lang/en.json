@@ -1,3 +1,18 @@
 {
-    "socialite" : "Log in with Socialite"
+    "socialite" : "Log in with Socialite",
+    "select a language": "Select a Language",
+    "spanish":"Spanish",
+    "english" : "English",
+    "Login": "Login",
+    "Logout": "Logout",
+    "Register" : "Register",
+    "Manage Courses": "Manage Courses",
+    "Manage Students": "Manage Students",
+    "Manage Teachers": "Manage Courses",
+    "My Profile": "My Profile",
+    "LogouMy Subscriptionst": "My Subscriptions",
+    "My Bills": "My Bills",
+    "My Courses": "My Courses",
+    "Courses Developed by Me": "Courses Developed by Me",
+    "Create Course": "Create Course"
 }

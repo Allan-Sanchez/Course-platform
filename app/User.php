@@ -50,6 +50,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //Validation Nav
+    public static function navigation()
+    {
+        return auth()->check() ? auth()->user()->role->name : 'guest';
+    }
+
     // 1 -> 1
     public function role()
     {

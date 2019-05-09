@@ -1,5 +1,6 @@
 <?php
 
+Route::get('/set_language/{lang}', 'Controller@setLanguage')->name('set_language');
 
 // social Account
 Route::get('login/{driver}','Auth\LoginController@redirectToProvider')->name('social_auth');
