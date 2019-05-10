@@ -1,5 +1,5 @@
 {
-    "socialite" : "Log in with Socialite",
+"socialite" : "Log in with Socialite",
     "select a language": "Select a Language",
     "spanish":"Spanish",
     "english" : "English",
@@ -14,5 +14,7 @@
     "My Bills": "My Bills",
     "My Courses": "My Courses",
     "Courses Developed by Me": "Courses Developed by Me",
-    "Create Course": "Create Course"
+    "Create Course": "Create Course",
+    "There are no courses available":"There are no courses available",
+    "text Jumbotron":"Access all the courses right now"
 }

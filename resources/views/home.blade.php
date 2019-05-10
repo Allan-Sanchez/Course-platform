@@ -1,23 +1,31 @@
 @extends('layouts.app')
 
+@section('jumbotron')
+@include('partials.jumbotron',[
+    'title' => __("text Jumbotron"),
+    'icon' =>"th"
+])    
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <div class="pl-5 pr-5">
+        <div class="row justify-content-center">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+            @forelse ($courses as $course)
+            <div class="col-md-4 col-lg-3">
+                @include('partials.courses.cards')
             </div>
+            @empty
+            <div class="alert alert-dark" role="alert">
+                {{__("There are no courses available")}}
+            </div>
+                
+            @endforelse
+
+            
         </div>
+                <div class=" row justify-content-center">
+                    {{$courses->links()}}
+                </div>
     </div>
-</div>
 @endsection

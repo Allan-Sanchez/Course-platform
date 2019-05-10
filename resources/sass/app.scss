@@ -1,9 +1,11 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Hind+Vadodara");
 
 // Variables  
 @import 'variables';
 $fa-font-path:"../webfonts";
+@import 'card';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -18,7 +20,7 @@ $fa-font-path:"../webfonts";
 //     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 // }
 body {
-    font-family: 'Hind Vadodara', sans-serif;
+    font-family: 'Nunito','Hind Vadodara', sans-serif;
   }
   
   main {

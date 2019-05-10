@@ -17,6 +17,12 @@ class Course extends Model
     const REJECTED = 3;
     // belongs to indica que la forign key esta aqui
 
+    // path by pictore
+    public function pathAttachment()
+    {
+        return "/storage/courses/". $this->picture;
+    }
+
     // 1 -> 1
     public function category (){
         return $this->belongsTo(Category::class)->select('id','name');
@@ -49,12 +55,18 @@ class Course extends Model
     // N -> N
     public function students()
     {
-        return $this->belongsToMany(Student::class);
+    return $this->belongsToMany(Student::class);
     }
 
     //1 -> 1 
     public function teacher()
     {
         return $this->belongsTo(Teacher::class);
+    }
+
+    // attribute personalizados
+    public function getRatingAttribute()
+    {
+        return $this->reviews->avg('rating');
     }
 }
