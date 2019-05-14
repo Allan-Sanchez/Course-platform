@@ -1,11 +1,13 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url("https://fonts.googleapis.com/css?family=Hind+Vadodara");
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 // Variables  
 @import 'variables';
 $fa-font-path:"../webfonts";
 @import 'card';
+@import 'related';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -113,5 +115,15 @@ body {
   .bg-light {
     border: 1px solid $app-bg-color;
     text-align: center;
+  }
+  .new-btn{
+    background: rgb(98, 71, 99);
+    border-color:#624763;
+    color: #fff;
+  }
+  .new-btn:hover{
+    background: rgb(64, 46, 65);
+    cursor: pointer;
+    color: white;
   }
   

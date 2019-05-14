@@ -15,12 +15,22 @@ class Course extends Model
     const PUBLISHED = 1;
     const PENDING = 2;
     const REJECTED = 3;
+    
+    //withcount
+    protected $withCount = ['reviews','students'];
+
     // belongs to indica que la forign key esta aqui
 
     // path by pictore
     public function pathAttachment()
     {
         return "/storage/courses/". $this->picture;
+    }
+
+    //key by password
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 
     // 1 -> 1
@@ -68,5 +78,15 @@ class Course extends Model
     public function getRatingAttribute()
     {
         return $this->reviews->avg('rating');
+    }
+
+    //courses related
+    public function relatedCourses()
+    {
+        return Course::with('reviews')->whereCategoryId($this->category->id)
+                        ->where('id','!=',$this->id)
+                        ->latest()
+                        ->limit(6)
+                        ->get();
     }
 }

@@ -6,13 +6,14 @@ use App\Role;
 use App\Student;
 use App\Teacher;
 use App\UserSocialAccount;
+use Laravel\Cashier\Billable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable,Billable;
 
     protected static function boot(){
         parent::boot();

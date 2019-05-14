@@ -16,5 +16,23 @@
     "Courses Developed by Me": "Cursos Desarrollados por Mi",
     "Create Course": "Crear Curso",
     "There are no courses available":"No hay cursos disponibles",
-    "text Jumbotron":"Accede a todos los cursos ahora mismo"
+    "text Jumbotron":"Accede a todos los cursos ahora mismo",
+    "Courses":"Cursos",
+    "Teacher":"Profesor",
+    "Category":"Categoria",
+    "Creation date":"Fecha de creacion",
+    "Update date":"Fecha de actulizacion",
+    "Registered students":"Estudiante Registrados",
+    "Number of ratings":"Numero de valuaciones",
+    "More Information":"Mas Informacion",
+    "subscribe" : "Suscribirme",
+    "register" : "Inscribirme",
+    "signed up" : "Inscrito",
+    "I am an author" : "Soy el Autor",
+    "Log in": "Inicias Sesion",
+    "No goals have been written for this course" :"No se han escrito metas para este curso",
+    "Course Goals":"Metas del curso",
+    "There is no requirement to take this course":"No hay ningún requisito para tomar este curso",
+    "requirements to take this course":"Requisitos para tomar este curso"
+    "What are we going to do?":"¿Que vamos a hacer?"
 }

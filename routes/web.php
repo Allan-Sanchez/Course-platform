@@ -8,6 +8,14 @@ Route::get('/set_language/{lang}', 'Controller@setLanguage')->name('set_language
 Route::get('login/{driver}','Auth\LoginController@redirectToProvider')->name('social_auth');
 Route::get('login/{driver}/callback', 'Auth\LoginController@handleProviderCallback');
 
+
+
+Auth::routes();
+
+
+Route::get('/','HomeController@index');
+// Route::get('/', 'HomeController@index')->name('home');
+
 // interveishion
 Route::get('/image/{path}/{attachment}', function ($path ,$attachment) {
    $file = sprintf('storage/%s/%s',$path,$attachment);
@@ -17,9 +25,6 @@ Route::get('/image/{path}/{attachment}', function ($path ,$attachment) {
    }
 });
 
-
-Auth::routes();
-
-
-Route::get('/','HomeController@index');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix'=>'courses'],function(){
+    Route::get('/{course}', 'CourseController@show')->name('cursos_detail');
+});

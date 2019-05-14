@@ -16,5 +16,24 @@
     "Courses Developed by Me": "Courses Developed by Me",
     "Create Course": "Create Course",
     "There are no courses available":"There are no courses available",
-    "text Jumbotron":"Access all the courses right now"
+    "text Jumbotron":"Access all the courses right now",
+    "Courses":"Courses",
+    "Teacher":"Teacher",
+    "Category":"Category",
+    "Creation date":"Creation date",
+    "Update date":"Update date",
+    "Registered students":"Registered students",
+    "Number of ratings":"Number of ratings",
+    "More Information":"More Information",
+    "subscribe" : "Subscribe",
+    "register" : "Register",
+    "signed up" : "Signed up",
+    "I am an author" : "I'm an author",
+    "Log in": "Log in",
+    "No goals have been written for this course":"No goals have been written for this course",
+    "Course Goals":"Course Goals",
+    "There is no requirement to take this course":"There is no requirement to take this course",
+    "requirements to take this course":"requirements to take this course",
+    "What are we going to do?":"What are we going to do?"
+
 }
