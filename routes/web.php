@@ -14,7 +14,7 @@ Auth::routes();
 
 
 Route::get('/','HomeController@index');
-// Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 // interveishion
 Route::get('/image/{path}/{attachment}', function ($path ,$attachment) {
@@ -27,4 +27,10 @@ Route::get('/image/{path}/{attachment}', function ($path ,$attachment) {
 
 Route::group(['prefix'=>'courses'],function(){
     Route::get('/{course}', 'CourseController@show')->name('cursos_detail');
+});
+
+//stripe route
+Route::group(['prefix'=>'subscriptions'],function(){
+    Route::get('/plans', 'SubscriptionController@plans')->name('subscription_plans');
+    Route::post('/process_subscription', 'SubscriptionController@processSubscription')->name('subscription_processSuscription');
 });

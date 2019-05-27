@@ -1,0 +1,45 @@
+
+
+/******************* Pricing Table Demo - 9 *****************/
+.demo9{background:#A7A7A7;padding:30px 0}
+.pricingTable9{background:#fff;padding-bottom:20px;overflow:hidden}
+.pricingTable9 .pricingTable-header{margin-bottom:40px;position:relative;z-index:1}
+.pricingTable9 .pricingTable-header:before{content:"";width:100%;height:150%;background:#606aa3;position:absolute;top:-90%;left:-20%;z-index:-1;transform:rotate(-42deg)}
+.pricingTable9 .pricingTable-header:after{content:"";width:100%;height:190%;background:#727cb6;position:absolute;top:-76%;right:-16%;z-index:-2;transform:rotate(20deg)}
+.pricingTable9 .price-value,.pricingTable9 .title{display:inline-block;width:50%;padding:30px 0;color:#fff;line-height:20px}
+.pricingTable9 .price-value{float:left;font-size:30px;position:relative;top:10px;left:20px}
+.pricingTable9 .currency{font-size:20px;position:relative;top:-10px;right:-3px}
+.pricingTable9 .title{margin:0;font-size:20px;font-weight:700;text-transform:uppercase;position:relative;top:10px;right:7px}
+.pricingTable9 .pricing-content{list-style:none;padding:0;margin:0 0 20px;text-align:center;clear:both}
+.pricingTable9 .pricing-content li{font-size:17px;color:#828282;line-height:40px}
+.pricingTable9 .pricingTable-signup{display:block;width:80%;padding:10px 0;text-align:center;border:1px solid #606aa3;border-radius:40px;margin:0 auto;font-size:18px;color:#606aa3;z-index:1;text-transform:uppercase;overflow:hidden;position:relative}
+.pricingTable9 .pricingTable-signup:after,.pricingTable9 .pricingTable-signup:before{content:"";border-width:0;border-style:solid;position:absolute;z-index:-1;transition:all .7s ease 0s}
+.pricingTable9 .pricingTable-signup:before{border-color:transparent transparent transparent #606aa3;bottom:0;left:0}
+.pricingTable9 .pricingTable-signup:after{border-color:transparent #606aa3 transparent transparent;top:0;right:0}
+.pricingTable9 .pricingTable-signup:hover:after,.pricingTable9 .pricingTable-signup:hover:before{border-width:150px 262px}
+.pricingTable9.green .pricingTable-header:before{background:#18a288}
+.pricingTable9.green .pricingTable-header:after{background:#1abc9c}
+.pricingTable9.green .pricingTable-signup{border-color:#1abc9c;color:#1abc9c}
+.pricingTable9.green .pricingTable-signup:before{border-color:transparent transparent transparent #18a288}
+.pricingTable9.green .pricingTable-signup:after{border-color:transparent #18a288 transparent transparent}
+.pricingTable9.orange .pricingTable-header:before{background:#ee6e00}
+.pricingTable9.orange .pricingTable-header:after{background:#e67e22}
+.pricingTable9.orange .pricingTable-signup{border-color:#e67e22;color:#e67e22}
+.pricingTable9.orange .pricingTable-signup:before{border-color:transparent transparent transparent #ee6e00}
+.pricingTable9.orange .pricingTable-signup:after{border-color:transparent #ee6e00 transparent transparent}
+.pricingTable9.purple .pricingTable-header:before{background:#b14468}
+.pricingTable9.purple .pricingTable-header:after{background:#cf4d78}
+.pricingTable9.purple .pricingTable-signup{border-color:#cf4d78;color:#cf4d78}
+.pricingTable9.purple .pricingTable-signup:before{border-color:transparent transparent transparent #b14468}
+.pricingTable9.purple .pricingTable-signup:after{border-color:transparent #b14468 transparent transparent}
+@media only screen and (max-width:990px){.pricingTable9{margin-bottom:30px}
+}
+@media only screen and (max-width:767px){.pricingTable9 .pricingTable-header:before{height:300%;top:-267%}
+.pricingTable9 .pricingTable-header:after{height:270%;top:-106%}
+.pricingTable9 .title{text-align:center}
+}
+@media only screen and (max-width:480px){.pricingTable9 .pricingTable-header:after{top:-146%}
+}
+@media only screen and (max-width:479px){.pricingTable9 .pricingTable-header:before{height:200%;top:-120%;left:-20%}
+}
+

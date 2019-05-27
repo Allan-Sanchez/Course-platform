@@ -23,7 +23,7 @@
     @include('partials.navigation')
 
     @yield('jumbotron')
-    <div id="app">
+    <div id="app" >
         <main class="py-4">
             @if (session('message'))
             <div class="row justify-content-center">

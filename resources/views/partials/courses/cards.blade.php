@@ -3,7 +3,7 @@
     
     <div class="card-body">
         <span class="badge-box"> <i class="fa fa-check" aria-hidden="true"></i></span>
-        <h4 class="card-title">{{$course->name}}</h4>
+        <h4 class="card-title">{{str_limit($course->name,40)}}</h4>
         <hr>
 
         <div class="row justify-content-center">
