@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -35,6 +35,26 @@
                 </div>
             </div>
                 
+            @elseif(session('message-course-error'))
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="alert alert-danger">
+                        <h4 class="alert-heading">{{__("Informative message")}}</h4>
+                        <p>{{session('message-course-error')}}</p>
+                    </div>
+                </div>
+            </div>
+                
+            @elseif(session('message-course-success'))
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="alert alert-danger">
+                        <h4 class="alert-heading">{{__("Plan adquirido con exito")}}</h4>
+                        <p>{{session('message-course-success')}}</p>
+                    </div>
+                </div>
+            </div>
+
             @endif
 
             @yield('content')

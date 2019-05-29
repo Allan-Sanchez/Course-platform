@@ -32,5 +32,6 @@ Route::group(['prefix'=>'courses'],function(){
 //stripe route
 Route::group(['prefix'=>'subscriptions'],function(){
     Route::get('/plans', 'SubscriptionController@plans')->name('subscription_plans');
+    Route::get('/admin', 'SubscriptionController@admin')->name('subscription_admin');
     Route::post('/process_subscription', 'SubscriptionController@processSubscription')->name('subscription_processSuscription');
 });

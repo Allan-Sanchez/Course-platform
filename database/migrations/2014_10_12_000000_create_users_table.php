@@ -51,7 +51,7 @@ class CreateUsersTable extends Migration
             $table->string('stripe_plan');
             $table->integer('quantity');
             $table->timestamp('trial_ends_at')->nullable();
-            $table->timestamp('end_at')->nullable();
+            $table->timestamp('ends_at')->nullable();
             $table->timestamps();
         });
         Schema::create('user_social_accounts',function (Blueprint $table){

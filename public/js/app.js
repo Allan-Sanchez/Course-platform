@@ -1781,7 +1781,8 @@ __webpack_require__.r(__webpack_exports__);
     stripe_key: '',
     name: '',
     amount: '',
-    description: ''
+    description: '',
+    form_id: ''
   },
   computed: {
     product: function product() {
@@ -1790,6 +1791,9 @@ __webpack_require__.r(__webpack_exports__);
         amount: parseFloat(this.amount),
         description: this.description
       };
+    },
+    formrole: function formrole() {
+      return form_id = this.form_id;
     }
   }
 });
@@ -37097,6 +37101,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("stripe-checkout", {
     attrs: {
+      "form-id": _vm.form_id,
       button: "SIGN UP",
       buttonClass: "pricingTable-signup",
       "stripe-key": _vm.stripe_key,

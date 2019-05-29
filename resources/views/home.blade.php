@@ -1,11 +1,11 @@
 @extends('layouts.app')
-
 @section('jumbotron')
 @include('partials.jumbotron',[
     'title' => __("text Jumbotron"),
     'icon' =>"th"
 ])    
 @endsection
+
 
 @section('content')
     <div class="pl-5 pr-5">

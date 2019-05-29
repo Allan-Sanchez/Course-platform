@@ -46,5 +46,8 @@
     "Monthly":"Monthly",
     "Quarterly":"Quarterly",
     "Yearly":"Yearly",
-    "Do you have a coupon?": "Do you have a coupon?"
+    "Do you have a coupon?": "Do you have a coupon?",
+    "the coupon is not valid":"the coupon is not valid",
+    "Informative message":"Informative message",
+    "My subscriptions":"My subscriptions"
 }

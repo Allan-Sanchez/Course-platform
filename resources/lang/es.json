@@ -46,5 +46,9 @@
     "Monthly":"Mensual",
     "Quarterly":"Trimestral",
     "Yearly":"Anual",
-    "Do you have a coupon?":"Tienes un Cupon ?"
+    "Do you have a coupon?":"Tienes un Cupon ?",
+    "the coupon is not valid":"El cupon no es valido.",
+    "Informative message":"Mensaje Informativo",
+    "My subscriptions":"Mis suscripciones"
+
 }

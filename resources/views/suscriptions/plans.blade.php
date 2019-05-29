@@ -10,6 +10,7 @@
 @section('content')
 <div class="container">
     <div class="row flex justify-content-center">
+
         <div class="col-md-3 col-sm-6">
             <div class="pricingTable9" style="border: 1px solid #78a6ce;">
                 <div class="pricingTable-header">
@@ -46,11 +47,12 @@
                 </ul>
                 @include('partials.stripe.form',[
                     'product'=>[
-                        'name'=>'Subscription',
+                        'name'=>'Suscripcion Trimestral',
                         'description'=>'quarterly',
                         'type'=>'quarterly',
-                        'amount'=> 1999.99
-                    ]
+                        // 'type'=>'monthly',
+                        'amount'=> 1999
+                    ],
                 ])
             </div>
         </div>
@@ -68,11 +70,11 @@
                 </ul>
                 @include('partials.stripe.form',[
                     'product'=>[
-                        'name'=>'Subscription',
+                        'name'=>'Suscripcion Anual',
                         'description'=>'yearly',
                         'type'=>'yearly',
-                        'amount'=> 8999.99
-                    ]
+                        'amount'=> 8999
+                    ],
                 ])
             </div>
         </div>

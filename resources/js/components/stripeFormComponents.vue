@@ -1,5 +1,5 @@
 <template>
-        <stripe-checkout  button="SIGN UP" buttonClass="pricingTable-signup" 
+        <stripe-checkout :form-id="form_id" button="SIGN UP" buttonClass="pricingTable-signup" 
         :stripe-key="stripe_key" :product="product">
         </stripe-checkout>
 </template>
@@ -15,7 +15,8 @@ export default {
         stripe_key:'',
         name:'',
         amount:'',
-        description:''
+        description:'',
+        form_id:''
     },
     computed: {
         product(){
@@ -24,7 +25,8 @@ export default {
                 amount:parseFloat(this.amount),
                 description:this.description,
             }
-        }
+        },
+        
     },
 }
 </script>
