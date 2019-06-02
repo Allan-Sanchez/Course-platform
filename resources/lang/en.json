@@ -49,5 +49,17 @@
     "Do you have a coupon?": "Do you have a coupon?",
     "the coupon is not valid":"the coupon is not valid",
     "Informative message":"Informative message",
-    "My subscriptions":"My subscriptions"
+    "My subscriptions":"My subscriptions",
+    "Successful plan":"Successful plan",
+    "My bills":"My bills",
+    "registration date":"registration date",
+    "registration cost":"registration cost",
+    "Coupon":"Coupon",
+    "Download invoice":"Download invoice",
+    "No coupon was occupied":"No coupon was occupied",
+    "There is no invoice available":"There is no invoice available",
+    "Download":"Download",
+    "An error has occurred":"An error has occurred",
+    "You have successfully resumed your subscription":"You have successfully resumed your subscription",
+    "The subscription has been canceled successfully":"The subscription has been canceled successfully"
 }

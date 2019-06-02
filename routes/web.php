@@ -29,9 +29,22 @@ Route::group(['prefix'=>'courses'],function(){
     Route::get('/{course}', 'CourseController@show')->name('cursos_detail');
 });
 
-//stripe route
-Route::group(['prefix'=>'subscriptions'],function(){
-    Route::get('/plans', 'SubscriptionController@plans')->name('subscription_plans');
-    Route::get('/admin', 'SubscriptionController@admin')->name('subscription_admin');
-    Route::post('/process_subscription', 'SubscriptionController@processSubscription')->name('subscription_processSuscription');
+Route::group(['middleware' => ['auth']],function(){
+    //stripe route
+    Route::group(['prefix'=>'subscriptions'],function(){
+        Route::get('/plans', 'SubscriptionController@plans')->name('subscription_plans');
+        Route::get('/admin', 'SubscriptionController@admin')->name('subscription_admin');
+        Route::post('/process_subscription', 'SubscriptionController@processSubscription')->name('subscription_processSuscription');
+    
+        Route::post('/resume', 'subscriptionController@resume')->name('subscription_resume');
+        Route::post('/cancel', 'subscriptionController@cancel')->name('subscription_cancel');
+    });
+
+    // factura stripe otra forma de agrupar rutas
+    Route::prefix('invoices')->group(function () {
+        Route::get('/admin', 'InvoiceController@admin')->name('invoice-admin');
+        Route::get('/{invoices}/download}', 'InvoiceController@download')->name('invoice-download');
+    });
 });
+
+

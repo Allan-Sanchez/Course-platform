@@ -12,7 +12,8 @@ class SubscriptionController extends Controller
         $this->middleware(function($request, $next){
             if(auth()->user()->subscribed('main')){
                 return redirect('/')
-                ->with('message',['Warning',__("You are currently subscribed to another plan")]);
+                ->with('message-course-warning',__("You are currently subscribed to another plan"));
+                // ->with('message',['Warning',__("You are currently subscribed to another plan")]);
             }
             return $next($request);
         })->only(['plans','processSubscription']);
@@ -28,9 +29,8 @@ class SubscriptionController extends Controller
     {
         $token = request('stripeToken');
 	    try {
-            return \request();
+            // return \request();
 			if ( \request()->has('coupon')) {
-                // return request('coupon');
 				\request()->user()->newSubscription('main', \request('type'))
                     ->withCoupon(\request('coupon'))->create($token);
 			} else {
@@ -39,16 +39,36 @@ class SubscriptionController extends Controller
 			}
 		    return redirect(route('subscription_admin'))
             // ->with('message', ['success', __("La suscripción se ha llevado a cabo correctamente")]);
-            ->with('message-course-success',__("the coupon is  valid"));
+            ->with('message-course-success',__("Successful plan"));
 	    } catch (\Exception $exception) {
-	    	 return $error = $exception->getMessage();
+	    	$error = $exception->getMessage();
 	    	// return back()->with('message', ['danger', $error]);
-	    	// return back()->with('message-course-error',__("the coupon is not valid"));
+	    	return back()->with('message-course-error',__("the coupon is not valid"));
 	    }
     }   
 
     public function admin()
     {
-        return view('suscriptions.admin');
+        $subscriptions = auth()->user()->subscriptions;
+        return view('suscriptions.admin',compact('subscriptions'));
+    }
+
+    public function resume()
+    {
+        $subscription = \request()->user()->subscription(\request('plan'));
+        if ($subscription->cancelled() && $subscription->onGracePeriod()) {
+            \request()->user()->subscription(\request('plan'))->resume();
+            
+            return back()->with('message-course-success',__("You have successfully resumed your subscription"));
+        }
+
+        return back()->with('message-course-error',__("An error has occurred"));
+    }
+
+    public function cancel()
+    {
+        auth()->user()->subscription(\request('plan'))->cancel();
+        return back()->with('message-course-success',__("The subscription has been canceled successfully"));
+
     }
 }

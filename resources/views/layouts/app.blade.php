@@ -48,14 +48,23 @@
             @elseif(session('message-course-success'))
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <div class="alert alert-danger">
-                        <h4 class="alert-heading">{{__("Plan adquirido con exito")}}</h4>
+                    <div class="alert alert-success">
+                        <h4 class="alert-heading">{{__("Informative message")}}</h4>
                         <p>{{session('message-course-success')}}</p>
                     </div>
                 </div>
             </div>
 
-            @endif
+    @elseif(session('message-course-warning'))
+               <div class="row justify-content-center">
+                   <div class="col-md-10">
+                       <div class="alert alert-warning">
+                           <h4 class="alert-heading">{{__("Informative message")}}</h4>
+                           <p>{{session('message-course-warning')}}</p>
+                       </div>
+                   </div>
+               </div>
+               @endif
 
             @yield('content')
         </main>

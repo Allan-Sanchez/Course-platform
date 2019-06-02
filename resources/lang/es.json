@@ -49,6 +49,18 @@
     "Do you have a coupon?":"Tienes un Cupon ?",
     "the coupon is not valid":"El cupon no es valido.",
     "Informative message":"Mensaje Informativo",
-    "My subscriptions":"Mis suscripciones"
+    "My subscriptions":"Mis suscripciones",
+    "Successful plan":"Plan adquirido con éxito",
+    "My bills":"Mis Facturas",
+    "registration date":"Fecha de Registro",
+    "registration cost":"Costo de registro",
+    "Coupon":"Cupon",
+    "Download invoice":"Descargar factura",
+    "No coupon was occupied":"Ningún cupón fue ocupado",
+    "There is no invoice available":"No hay factura disponible.",
+    "Download":"Descargar",
+    "An error has occurred":"Se ha acurrido un error",
+    "You have successfully resumed your subscription":"Has reanudado con éxito tu suscripción.",
+    "The subscription has been canceled successfully":"La suscripción ha sido cancelada con éxito."
 
 }
